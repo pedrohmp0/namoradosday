@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Dia dos Namorados, Meu Amor!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Pacifico&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <canvas id="petalsCanvas" aria-hidden="true"></canvas>
+    <div id="heartsContainer" class="hearts-container" aria-hidden="true"></div>
+    <div id="floatingHearts" class="floating-hearts" aria-hidden="true"></div>
+
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Feliz Dia dos Namorados, Meu Amor!</h1>
+                <p class="subtitle">5 meses da nossa história de amor, brilhando como estrelas.</p>
+            </div>
+        </header>
+
+        <section class="love-timer">
+            <h2>Nosso Tempo Juntos</h2>
+            <div class="timer-container">
+                <div class="timer-box">
+                    <div class="timer-number" id="love-months">0</div>
+                    <div class="timer-label">Meses</div>
+                </div>
+                <div class="timer-box">
+                    <div class="timer-number" id="love-days">0</div>
+                    <div class="timer-label">Dias</div>
+                </div>
+                <div class="timer-box">
+                    <div class="timer-number" id="love-hours">0</div>
+                    <div class="timer-label">Horas</div>
+                </div>
+                <div class="timer-box">
+                    <div class="timer-number" id="love-minutes">0</div>
+                    <div class="timer-label">Minutos</div>
+                </div>
+                <div class="timer-box">
+                    <div class="timer-number" id="love-seconds">0</div>
+                    <div class="timer-label">Segundos</div>
+                </div>
+            </div>
+            <button class="love-btn" id="kissBtn" aria-label="Enviar um beijo"><i class="fas fa-kiss-wink-heart"></i> Enviar um Beijo</button>
+            <p class="kiss-counter">Beijos enviados: <span id="kissCount">0</span></p>
+        </section>
+
+        <section class="love-counter">
+            <h2>Nosso Contador de "Eu Te Amo"</h2>
+            <div class="love-counter-display">
+                <span id="loveCount">0</span>
+                <p>vezes que dissemos "Eu Te Amo"</p>
+            </div>
+            <button class="love-btn" id="countLoveBtn" aria-label="Registrar 'Eu Te Amo'">Registrar Agora <i class="fas fa-heart"></i></button>
+            <div class="quote-carousel" id="quoteCarousel">
+                <div class="quote active">"Você foi meu inesperado mais esperado"</div>
+                <div class="quote">"Amar não é olhar um para o outro, é olhar juntos na mesma direção." - Antoine de Saint-Exupéry</div>
+                <div class="quote">"Você é a poesia que nunca soube escrever."</div>
+            </div>
+        </section>
+
+        <section class="special-songs">
+            <h2>Nossas Músicas Especiais</h2>
+            <p class="section-subtitle">As melodias que embalam nosso amor</p>
+            <div class="songs-container">
+                <div class="song-item">
+                    <h3>"Aliança - Tribalista"</h3>
+                    <p>Somos uma canção que nunca vai ter fim.</p>
+                    <audio controls>
+                        <source src="arquivos/Aliança - Tribalistas (clipe oficial).mp3" type="audio/mp3">
+                        Seu navegador não suporta o elemento de áudio.
+                    </audio>
+                </div>
+                <div class="song-item">
+                    <h3>"Preciso Dizer Que Te Amo - Cazuza"</h3>
+                    <p>Te sinto em cada silêncio e em cada palavra não dita — porque mesmo sem dizer, meu coração já sabe: te amo.</p>
+                    <audio controls>
+                        <source src="arquivos/Preciso Dizer Que Te Amo (Ao Vivo).mp3" type="audio/mp3">
+                        Seu navegador não suporta o elemento de áudio.
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <section class="future-plans">
+            <h2>Nossos Planos para o Futuro</h2>
+            <p class="section-subtitle">Vamos construir juntos um futuro cheio de amor</p>
+            <div id="plansContainer" class="plans-container">
+                <div class="plan-item">
+                    <h3>Explorar o Mundo</h3>
+                    <p>Viajar juntos para descobrir novos lugares e criar memórias inesquecíveis.</p>
+                </div>
+                <div class="plan-item">
+                    <h3>Casa dos Sonhos</h3>
+                    <p>Planejar e construir nosso cantinho perfeito, cheio de amor e conforto.</p>
+                </div>
+            </div>
+            <button class="love-btn" id="addPlanBtn" aria-label="Sonhar Mais">Sonhar Mais <i class="fas fa-star"></i></button>
+        </section>
+
+        <section class="quiz-section">
+            <h2>Quiz do Nosso Amor</h2>
+            <div id="quizContainer" class="quiz-container"></div>
+            <div id="quizResult" class="quiz-result"></div>
+        </section>
+
+        <section class="nasa-section">
+            <h2>O Céu dos Nossos Momentos</h2>
+            <p class="section-subtitle">Toque nos botões para ver o céu dos nossos dias especiais</p>
+            <div class="special-dates-container">
+                <div class="date-option">
+                    <button class="date-btn" data-date="2025-01-05" data-title="Nosso Primeiro Beijo" aria-label="Ver céu de 05/01/2025">
+                        <i class="fas fa-star"></i> 05/01/2025
+                    </button>
+                    <div class="date-description">
+                        Como duas galáxias se unindo, nosso primeiro beijo foi o começo de um universo inteiro nascendo entre nós.
+                    </div>
+                </div>
+                <div class="date-option">
+                    <button class="date-btn" data-date="2025-01-22" data-title="Início do Nosso Namoro" aria-label="Ver céu de 22/01/2025">
+                        <i class="fas fa-star"></i> 22/01/2025
+                    </button>
+                    <div class="date-description">
+                        Nosso amor nasceu silencioso como uma estrela na nebulosa América do Norte, mas brilhou forte o bastante pra transformar tudo.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <h2>Nossa Galeria</h2>
+            <div id="galleryContainer" class="gallery-container"></div>
+        </section>
+
+        <section class="memory-game">
+            <h2>Jogo da Memória do Nosso Amor</h2>
+            <p>Encontre os pares para revelar uma mensagem especial!</p>
+            <div id="memoryGrid" class="memory-grid"></div>
+            <div id="memoryMessage" class="memory-message"></div>
+        </section>
+
+        <section class="secret-message">
+            <h2>Mensagem Secreta</h2>
+            <p>Descubra todas as peças para minha mensagem especial:</p>
+            <div class="message-pieces">
+                <div class="piece" aria-label="Peça da mensagem secreta"><i class="fas fa-lock"></i></div>
+                <div class="piece" aria-label="Peça da mensagem secreta"><i class="fas fa-lock"></i></div>
+                <div class="piece" aria-label="Peça da mensagem secreta"><i class="fas fa-lock"></i></div>
+                <div class="piece" aria-label="Peça da mensagem secreta"><i class="fas fa-lock"></i></div>
+            </div>
+            <div id="fullMessage" class="full-message"></div>
+        </section>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-hearts">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+            </div>
+            <div class="footer-message">
+                <p>Espero que tenha gostado <i class="fas fa-heart"></i> Eu te amo</p>
+                <p>Nosso amor é infinito como as estrelas</p>
+            </div>
+            <div class="valentine-countdown">
+                <p>Faltam <span id="countdownDays">0</span> dias para o próximo Dia dos Namorados!</p>
+            </div>
+            <div class="footer-copyright">
+                © 2025 | Nosso primeiro dia dos namorados de muitos
+            </div>
+        </div>
+    </footer>
+
+    <div id="customModal" class="custom-modal" aria-hidden="true">
+        <div class="custom-modal-content">
+            <button class="custom-modal-close" aria-label="Fechar modal">×</button>
+            <div id="modalContent" class="modal-content-inner"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
