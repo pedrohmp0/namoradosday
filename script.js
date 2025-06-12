@@ -184,10 +184,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const addPlanBtn = document.getElementById('addPlanBtn');
 
         const additionalPlans = [
-            { title: "Adotar um Pet", desc: "Trazer um novo membro peludo para nossa família." },
-            { title: "Noite de Filmes", desc: "Planejar maratonas com pipoca e nossos filmes favoritos." },
-            { title: "Aprender Algo Novo", desc: "Fazer um curso juntos, como culinária ou dança." }
-        ];
+            { title: "Casarmos", desc: "Planejar nosso casamento dos sonhos e celebrar nosso amor." },
+            { title: "Construir uma Família", desc: "Formar uma família linda, cheia de amor e união." },
+            { title: "Lua de Mel dos Sonhos", desc: "Viajar juntos para um lugar inesquecível depois do casamento." }
+];
         let planIndex = 0;
 
         addPlanBtn.addEventListener('click', () => {
@@ -214,29 +214,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const questions = [
             {
-                question: "Onde foi nosso primeiro beijo?",
-                options: ["Na praia", "No parque", "Na sua casa", "No carro"],
-                answer: 2
+                question: "Onde foi o pedido de namoro?",
+                options: ["No shopping", "Na praça", "Na sua casa", "Quinta da Boa Vista"],
+                answer: [3]
             },
             {
-                question: "Qual foi a primeira coisa que te falei?",
-                options: ["Você é linda", "Oi, tudo bem?", "Quer sair comigo?", "Você gosta de café?"],
-                answer: 1
+                question: "Qual foi o local do nosso primeiro date?",
+                options: ["No shopping", "Igreja", "Praça", "Rua"],
+                answer: [0]
             },
             {
-                question: "Quem te ama mais que tudo?",
-                options: ["Pedro (Eu)", "Ninguém", "Você mesma", "Todos"],
-                answer: 0
+                question: "Quem teve atitude de beijar primeiro?",
+                options: ["Guilherme (Eu)", "Os dois", "Você mesma(Nicolly)"],
+                answer: [2]
             },
             {
-                question: "Qual é o nosso plano para o futuro?",
-                options: ["Viajar o mundo", "Construir uma família", "Comprar uma casa", "Todas as anteriores"],
-                answer: 3
+                question: "Quem ama mais?",
+                options: ["Guilherme (Eu)", "Você (Nicolly)"],
+                answer: [0]
             },
             {
-                question: "O que mais amo em você?",
-                options: ["Seu sorriso", "Sua risada", "Seu coração", "Tudo"],
-                answer: 3
+                question: "Quem é mais linda, perfeita, maravilhosa?",
+                options: ["Você (Nicolly)", "Você (Nicolly)", "Você (Nicolly)", "Você (Nicolly)"],
+                answer: [0, 1, 2, 3] 
             }
         ];
 
