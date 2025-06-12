@@ -216,27 +216,27 @@ document.addEventListener('DOMContentLoaded', () => {
             {
                 question: "Onde foi o pedido de namoro?",
                 options: ["No shopping", "Na praça", "Na sua casa", "Quinta da Boa Vista"],
-                answer: [3]
+                answer: 3
             },
             {
                 question: "Qual foi o local do nosso primeiro date?",
                 options: ["No shopping", "Igreja", "Praça", "Rua"],
-                answer: [0]
+                answer: 0
             },
             {
                 question: "Quem teve atitude de beijar primeiro?",
                 options: ["Guilherme (Eu)", "Os dois", "Você mesma(Nicolly)"],
-                answer: [2]
+                answer: 2
             },
             {
                 question: "Quem ama mais?",
                 options: ["Guilherme (Eu)", "Você (Nicolly)"],
-                answer: [0]
+                answer: 0
             },
             {
                 question: "Quem é mais linda, perfeita, maravilhosa?",
-                options: ["Você (Nicolly)", "Você (Nicolly)", "Você (Nicolly)", "Você (Nicolly)"],
-                answer: [0, 1, 2, 3] 
+                options: ["Você (Nicolly)"],
+                answer: 0
             }
         ];
 
